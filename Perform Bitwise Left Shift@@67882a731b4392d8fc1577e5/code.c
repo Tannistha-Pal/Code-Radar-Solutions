@@ -9,7 +9,7 @@ int main() {
     int result = num << shift;
     
     // Displaying the result
-    printf("Result after left shifting %d by %d positions: %d\n", num, shift, result);
+    printf("%d\n",result);
     
     return 0;
 }
