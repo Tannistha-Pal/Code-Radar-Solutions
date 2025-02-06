@@ -9,7 +9,6 @@ int main() {
     int result = num << shift;
     
     // Displaying the result
-    printf("%d\n",result);
-    
+    printf("%d",result);
     return 0;
 }
