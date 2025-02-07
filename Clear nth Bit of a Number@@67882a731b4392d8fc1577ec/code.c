@@ -1,0 +1,16 @@
+// Function to clear the nth bit of a number
+unsigned int clearNthBit(unsigned int num, int n) {
+    return num & ~(1 << n);
+}
+
+int main() {
+    unsigned int num;
+    int n;
+    // Input from user
+    scanf("%u", &num);
+    scanf("%d", &n);
+    // Clearing the nth bit
+    unsigned int result = clearNthBit(num, n);
+    printf("Number after clearing %dth bit: %u\n", n, result);
+    return 0;
+}
