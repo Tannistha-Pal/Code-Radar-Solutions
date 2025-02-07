@@ -12,9 +12,9 @@ int main() {
     
     // Checking for leap year
     if (isLeapYear(year)) {
-        printf("%d is a leap year.\n", year);
+        printf("Leap Year");
     } else {
-        printf("%d is not a leap year.\n", year);
+        printf("Not a Leap Year");
     }
     return 0;
 }
