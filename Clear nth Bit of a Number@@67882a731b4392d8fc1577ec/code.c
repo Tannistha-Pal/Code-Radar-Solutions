@@ -7,7 +7,7 @@ int main() {
     unsigned int num;
     int n;
     // Input from user
-    scanf("%u", &num);
+    scanf("%d", &num);
     scanf("%d", &n);
     // Clearing the nth bit
     unsigned int result = clearNthBit(num, n);
