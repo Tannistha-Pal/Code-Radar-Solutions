@@ -13,7 +13,7 @@ int countTrailingZeroes(unsigned int num) {
 }
 int main() {
     unsigned int num
-    scanf("%u", &num);
+    scanf("%d", &num);
     // Counting trailing zeroes
     int result = countTrailingZeroes(num);
     printf("%d\n", result);
