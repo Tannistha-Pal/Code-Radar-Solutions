@@ -5,12 +5,12 @@ unsigned int flipBits(unsigned int num) {
 }
 int main() {
     unsigned int num;
-    scanf("%u", &num);
+    scanf("%d", &num);
     
     // Flipping all bits
     unsigned int result = flipBits(num);
     
-    printf("%u\n", result);
+    printf("%d\n", result);
     
     return 0;
 }
