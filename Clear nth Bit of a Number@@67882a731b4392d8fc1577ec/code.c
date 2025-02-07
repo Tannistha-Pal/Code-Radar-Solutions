@@ -1,3 +1,4 @@
+#include<stdio.h>
 // Function to clear the nth bit of a number
 unsigned int clearNthBit(unsigned int num, int n) {
     return num & ~(1 << n);
