@@ -11,6 +11,6 @@ int main() {
     scanf("%d", &n);
     // Clearing the nth bit
     unsigned int result = clearNthBit(num, n);
-    printf("Number after clearing %dth bit: %u\n", n, result);
+    printf("%u", result);
     return 0;
 }
