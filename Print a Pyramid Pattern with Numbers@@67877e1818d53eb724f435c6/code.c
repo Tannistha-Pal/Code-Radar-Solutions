@@ -15,7 +15,7 @@ int main() {
 
         // Print numbers from 1 to the row number
         for (j = 1; j <= i; j++) {
-            printf(" %d ", j);
+            printf("%d ", j);
         }
 
         printf("\n");  // Move to next line
