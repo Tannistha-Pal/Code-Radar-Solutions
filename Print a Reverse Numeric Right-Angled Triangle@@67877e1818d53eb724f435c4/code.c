@@ -1,13 +1,11 @@
 #include <stdio.h>
-
 int main() {
     int N, i, j;
     // Input the number of rows
     scanf("%d", &N);
-
-    // Loop to print the pattern
-    for (i = 1; i <= N; i++) {  // Rows
-        for (j = i; j >= 1; j--) {  // Numbers from row number to 1
+    // Loop to print the reverse numeric triangle
+    for (i = N; i >= 1; i--) {  // Rows start from N down to 1
+        for (j = 1; j <= i; j++) {  // Print numbers from 1 to i
             printf("%d ", j);
         }
         printf("\n");  // Newline after each row
@@ -15,3 +13,4 @@ int main() {
 
     return 0;
 }
+
