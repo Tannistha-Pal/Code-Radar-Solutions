@@ -7,7 +7,7 @@ int main() {
     for (i = 1; i <= N; i++) {  
         // Print leading spaces for center alignment
         for (space = 1; space <= N - i; space++) {
-            printf("  ");  
+            printf(" ");  
         }
 
         // Print numbers from 1 to the row number
