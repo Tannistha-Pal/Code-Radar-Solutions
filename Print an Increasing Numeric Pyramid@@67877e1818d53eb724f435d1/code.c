@@ -3,9 +3,9 @@ int main() {
     int rows;
     scanf("%d", &rows);
     int num = 1; // Starting number
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= rows; i++) { // Corrected variable name from 'n' to 'rows'
         // Print leading spaces
-        for (int j = 1; j <= n - i; j++) {
+        for (int j = 1; j <= rows - i; j++) {
             printf("  ");
         }
         // Print numbers
@@ -16,3 +16,4 @@ int main() {
     }
     return 0;
 }
+
