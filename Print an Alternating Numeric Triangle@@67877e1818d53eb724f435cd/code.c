@@ -1,10 +1,11 @@
 #include <stdio.h>
+
 int main() {
     int n;
-    // Get the number of rows from the user
     scanf("%d", &n);
-    for (int i = 0; i < n; i++) {
-        int num = i % 2; // Start with 0 for even rows, 1 for odd rows
+
+    for (int i = 1; i <= n; i++) { // Start from 1 instead of 0
+        int num = (i % 2 == 1) ? 1 : 0; // Start with 1 for odd rows, 0 for even rows
 
         for (int j = 1; j <= i; j++) {
             printf("%d ", num);
