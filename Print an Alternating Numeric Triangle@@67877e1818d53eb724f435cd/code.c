@@ -1,9 +1,7 @@
 #include <stdio.h>
-
 int main() {
     int n;
     scanf("%d", &n);
-
     for (int i = 1; i <= n; i++) { // Start from 1 instead of 0
         int num = (i % 2 == 1) ? 1 : 0; // Start with 1 for odd rows, 0 for even rows
 
@@ -13,6 +11,5 @@ int main() {
         }
         printf("\n");
     }
-
     return 0;
 }
