@@ -3,7 +3,6 @@ int main() {
     int N, i, j, space;
     // Input the number of rows
     scanf("%d", &N);
-
     // Loop to print the pyramid
     for (i = 1; i <= N; i++) {  // Rows from 1 to N
         // Print spaces for alignment
@@ -16,6 +15,5 @@ int main() {
         }
         printf("\n");  // Newline after each row
     }
-
     return 0;
 }
