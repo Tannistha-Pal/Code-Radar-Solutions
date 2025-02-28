@@ -1,5 +1,4 @@
 #include <stdio.h>
-// Function to check if a number is prime
 int isPrime(int num) {
     if (num < 2) {
         return 0;
