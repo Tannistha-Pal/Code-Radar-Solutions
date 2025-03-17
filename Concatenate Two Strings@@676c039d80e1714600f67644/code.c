@@ -22,7 +22,7 @@ int main() {
     concatenateStrings(str1, str2);
 
     // Print the concatenated string
-    printf("Concatenated String: %s\n", str1);
+    printf("%s\n", str1);
 
     return 0;
 }
