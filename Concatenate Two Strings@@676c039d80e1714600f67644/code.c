@@ -4,25 +4,32 @@
 // Function to concatenate two strings
 void concatenateStrings(char str1[], char str2[]) {
     int len1 = strlen(str1);
-    int len2 = strlen(str2);
-
-    // Append characters of str2 to str1
-    for (int i = 0; i <= len2; i++) { // Including '\0'
-        str1[len1 + i] = str2[i];
+    
+    // Remove newline character from str1 if present
+    if (str1[len1 - 1] == '\n') {
+        str1[len1 - 1] = '\0';
+        len1--;
     }
+
+    int len2 = strlen(str2);
+    
+    // Remove newline character from str2 if present
+    if (str2[len2 - 1] == '\n') {
+        str2[len2 - 1] = '\0';
+    }
+
+    strcat(str1, str2);  // Concatenates str2 to str1
 }
 
 int main() {
-    char str1[200], str2[100];  // Ensure str1 has enough space
-
-    scanf("%s", str1);  // Using %s (for single-word input)
-    scanf("%s", str2);
+    char str1[200], str2[100];
+    fgets(str1, sizeof(str1), stdin);  // Reads the whole line
+    fgets(str2, sizeof(str2), stdin);  // Reads the whole line
 
     // Concatenate str2 to str1
     concatenateStrings(str1, str2);
 
-    // Print the concatenated string
-    printf("%s\n", str1);
+    printf("Concatenated String: %s\n", str1);
 
     return 0;
 }
