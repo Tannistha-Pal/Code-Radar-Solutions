@@ -21,9 +21,9 @@ int main() {
 
     // Check if it's a palindrome
     if (isPalindrome(str))
-        printf("yes\n");
+        printf("Yes\n");
     else
-        printf("no\n");
+        printf("No\n");
 
     return 0;
 }
