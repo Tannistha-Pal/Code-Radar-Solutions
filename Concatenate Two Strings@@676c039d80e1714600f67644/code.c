@@ -29,7 +29,7 @@ int main() {
     // Concatenate str2 to str1
     concatenateStrings(str1, str2);
 
-    printf("Concatenated String: %s\n", str1);
+    printf("%s\n", str1);
 
     return 0;
 }
