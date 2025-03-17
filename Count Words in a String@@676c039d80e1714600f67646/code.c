@@ -19,6 +19,6 @@ int main() {
     char str[200];
     fgets(str, sizeof(str), stdin);  // Read full line including spaces
     // Count words and display result
-    printf("Word count: %d\n", countWords(str));
+    printf("%d\n", countWords(str));
     return 0;
 }
