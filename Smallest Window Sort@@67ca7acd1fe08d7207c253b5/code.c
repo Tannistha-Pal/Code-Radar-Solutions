@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+// Function prototype
+int findUnsortedSubarrayLength(int arr[], int n);
+
 // Function to find the smallest subarray length that needs to be sorted
 int findUnsortedSubarrayLength(int arr[], int n) {
     int start = -1, end = -1;
-    
+
     // Step 1: Find the first out-of-order element from the left
     for (int i = 0; i < n - 1; i++) {
         if (arr[i] > arr[i + 1]) {
@@ -40,26 +43,26 @@ int findUnsortedSubarrayLength(int arr[], int n) {
 
 int main() {
     int T;
-    
+
     // Read number of test cases
     scanf("%d", &T);
-    
+
     while (T--) {
         int N;
-        
+
         // Read size of array
         scanf("%d", &N);
-        
+
         int arr[N];
-        
+
         // Read array elements
         for (int i = 0; i < N; i++) {
             scanf("%d", &arr[i]);
         }
-        
+
         // Compute and print the result
         printf("%d\n", findUnsortedSubarrayLength(arr, N));
     }
-    
+
     return 0;
 }
