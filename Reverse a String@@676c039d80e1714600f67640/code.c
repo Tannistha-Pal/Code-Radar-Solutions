@@ -17,16 +17,13 @@ void reverseString(char str[]) {
 
 int main() {
     char str[100];
-
-    // Input the string
-    printf("Enter a string: ");
     scanf("%99s", str);  // Using %99s to prevent buffer overflow
 
     // Reverse the string
     reverseString(str);
 
     // Print the reversed string
-    printf("Reversed string: %s\n", str);
+    printf("%s\n", str);
 
     return 0;
 }
