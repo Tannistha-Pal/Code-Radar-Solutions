@@ -33,7 +33,7 @@ int main() {
     // Find and print the most frequent character
     char result = mostFrequentChar(str);
     if (result != '\0')
-        printf("'%c'\n", result);
+        printf("%c\n", result);
     else
         printf("String is empty.\n");
 
