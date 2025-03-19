@@ -27,7 +27,7 @@ int main() {
     int result = countOccurrences(str, ch);
 
     // Output result
-    printf("%d\n"result);
+    printf("%d\n",result);
 
     return 0;
 }
