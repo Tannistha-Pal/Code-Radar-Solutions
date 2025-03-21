@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>  // Include string.h for strcspn function
 
 void toggleCase(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
