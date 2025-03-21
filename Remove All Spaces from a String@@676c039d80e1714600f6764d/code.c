@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>  // Include this header for strcspn()
 
 void removeSpaces(char *str) {
     int i = 0, j = 0;
@@ -17,7 +18,7 @@ int main() {
     fgets(str, sizeof(str), stdin);
 
     // Remove the trailing newline character if present
-    str[strcspn(str, "\n")] = 0;
+    str[strcspn(str, "\n")] = '\0';
 
     removeSpaces(str);
     printf("%s\n", str);
