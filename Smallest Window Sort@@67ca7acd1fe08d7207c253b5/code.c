@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 // Function to find the smallest subarray that needs sorting
 int findUnsortedSubarray(int arr[], int n) {
     int start = 0, end = n - 1;
@@ -18,11 +17,9 @@ int findUnsortedSubarray(int arr[], int n) {
 
     return (end - start + 1);
 }
-
 int main() {
     int T, n;
     scanf("%d", &T);  // Read number of test cases
-
     while (T--) {
         scanf("%d", &n);
         int arr[n];
@@ -32,6 +29,5 @@ int main() {
 
         printf("%d\n", findUnsortedSubarray(arr, n));
     }
-
     return 0;
 }
