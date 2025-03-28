@@ -5,11 +5,11 @@ int main() {
     scanf("%d", &n);
     while (n--) {
         scanf("%d", &x);
-        int sum = 0;
-        while (x) {
-            sum += x % 10;
-            x /= 10;
+        int sum = 0, num = x < 0 ? -x : x; // Take absolute value for digit sum
+        while (num) {
+            sum += num % 10;
+            num /= 10;
         }
-        printf("%d ", sum);
+        printf("%d ", x < 0 ? -sum : sum); // Restore original sign
     }
 }
