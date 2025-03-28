@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    int n, x;
+    int n, num;
     scanf("%d", &n);
+    
     while (n--) {
-        scanf("%d", &x);
-        int sum = 0, num = x < 0 ? -x : x; // Take absolute value for digit sum
+        scanf("%d", &num);
+        int sum = 0;
+        num = abs(num);  
         while (num) {
             sum += num % 10;
             num /= 10;
         }
-        printf("%d ", x < 0 ? -sum : sum); // Restore original sign
+        printf("%d ", sum);
     }
+    
+    return 0;
 }
