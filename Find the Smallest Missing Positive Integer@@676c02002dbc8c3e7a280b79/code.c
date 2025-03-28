@@ -1,12 +1,18 @@
 #include <stdio.h>
 
+#define MAX 1001  // Define max array size
+
+int found[MAX] = {0}; // Declare globally to avoid stack overflow
+
 int findMissing(int arr[], int n) {
-    int found[1001] = {0};  
+    for (int i = 0; i < MAX; i++) // Reset found array
+        found[i] = 0;
+    
     for (int i = 0; i < n; i++) 
-        if (arr[i] > 0) 
+        if (arr[i] > 0 && arr[i] < MAX) 
             found[arr[i]] = 1;
     
-    for (int i = 1; i <= 1000; i++) 
+    for (int i = 1; i < MAX; i++) 
         if (!found[i]) 
             return i;
     
@@ -14,8 +20,9 @@ int findMissing(int arr[], int n) {
 }
 
 int main() {
-    int n, arr[100];
+    int n;
     scanf("%d", &n);
+    int arr[n]; // Declare array after getting size
     for (int i = 0; i < n; i++) 
         scanf("%d", &arr[i]);
     
