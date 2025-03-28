@@ -18,7 +18,7 @@ int main() {
     if (n % 2 == 1)
         printf("%d\n", arr[n / 2]);
     else
-        printf("%d\n", (arr[n / 2 - 1] + arr[n / 2]) / 2.0);
+        printf("%f\n", (arr[n / 2 - 1] + arr[n / 2]) / 2.0);
 
     return 0;
 }
