@@ -1,50 +1,35 @@
 #include <stdio.h>
 
-void rotateLeft(int arr[], int n) {
-    int temp = arr[0];
-    for (int i = 0; i < n - 1; i++) {
-        arr[i] = arr[i + 1];
+void rotateArray(int arr[], int n, int k) {
+    k = k % n;
+    int temp[k];
+    
+    for (int i = 0; i < k; i++) {
+        temp[i] = arr[n - k + i];
     }
-    arr[n - 1] = temp;
-}
-
-void rotateRight(int arr[], int n) {
-    int temp = arr[n - 1];
-    for (int i = n - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
+    for (int i = n - 1; i >= k; i--) {
+        arr[i] = arr[i - k];
     }
-    arr[0] = temp;
-}
-
-void printArray(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+    for (int i = 0; i < k; i++) {
+        arr[i] = temp[i];
     }
-    printf("\n");
 }
 
 int main() {
-    int n, d, choice;
+    int n, k;
     scanf("%d", &n);
     int arr[n];
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    scanf("%d", &d);
-    scanf("%d", &choice);
+    scanf("%d", &k);
     
-    for (int i = 0; i < d; i++) {
-        if (choice == 1) {
-            rotateLeft(arr, n);
-        } else if (choice == 2) {
-            rotateRight(arr, n);
-        } else {
-            printf("Invalid choice!\n");
-            return 1;
-        }
+    rotateArray(arr, n, k);
+    
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
     }
+    printf("\n");
     
-    printf("Rotated array: ");
-    printArray(arr, n);
     return 0;
 }
