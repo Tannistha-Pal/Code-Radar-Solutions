@@ -1,17 +1,17 @@
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
-    int n, i, max = -1, secondMax = -1;
+    int n, num, max = INT_MIN, secondMax = INT_MIN;
     scanf("%d", &n);
-    int arr[n];
 
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-        if (arr[i] > max) {
+    while (n--) {
+        scanf("%d", &num);
+        if (num > max) {
             secondMax = max;
-            max = arr[i];
-        } else if (arr[i] > secondMax && arr[i] < max) {
-            secondMax = arr[i];
+            max = num;
+        } else if (num > secondMax && num < max) {
+            secondMax = num;
         }
     }
 
