@@ -15,6 +15,8 @@ int main() {
         }
     }
 
-    printf("%d\n", secondMax);
+    // If secondMax was never updated, print -1
+    printf("%d\n", (secondMax == INT_MIN) ? -1 : secondMax);
+    
     return 0;
 }
